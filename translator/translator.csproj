@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55B6190A-9149-4A96-B58E-B7D8EA954936}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>translator</RootNamespace>
+    <AssemblyName>translator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>translator.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>translator.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientLibraryBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Coding4Fun.Phone.Controls">
+      <HintPath>..\packages\Coding4Fun.Phone.Controls.1.5.6\lib\sl4-windowsphone71\Coding4Fun.Phone.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Advertising.Mobile.UI, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\SilverlightToolkitWP.4.2011.12.14\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.3\lib\sl4-windowsphone71\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nmsp_audioplayback, Version=3.7.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="nmsp_audiorecord, Version=3.7.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="nmsp_core, Version=3.7.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="nmsp_dictationresult, Version=3.7.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="nmsp_oem, Version=3.7.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="nmsp_resource_common, Version=3.7.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="nmsp_resource_nmas, Version=3.7.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="nmsp_vocoder_speex, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="SpeechKit, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="SpeechRecognitionClientLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services.Client, Version=7.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WP7Contrib.View.Controls">
+      <HintPath>Extension\WP7Contrib.View.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="wpSpeech, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AzureDataMarket\TranslatorData.cs" />
+    <Compile Include="AzureDataMarket\TranslatorContainer.cs" />
+    <Compile Include="Bing\BingInfo.cs" />
+    <Compile Include="ConversationView.xaml.cs">
+      <DependentUpon>ConversationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DatabaseController.cs" />
+    <Compile Include="Database\ViewModel\IViewModel.cs" />
+    <Compile Include="Database\ViewModel\TranslatorViewModel.cs" />
+    <Compile Include="Google\GoogleInfo.cs" />
+    <Compile Include="Google\GoogleTranslate.cs" />
+    <Compile Include="Google\Model\Data.cs" />
+    <Compile Include="Google\Model\Root.cs" />
+    <Compile Include="Google\Model\TranslateModel.cs" />
+    <Compile Include="Google\Model\Translations.cs" />
+    <Compile Include="Google\UrlShortner.cs" />
+    <Compile Include="Hawaii\HawaiiClient.cs" />
+    <Compile Include="Languages.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageCollection.cs" />
+    <Compile Include="MessageContentPresenter.cs" />
+    <Compile Include="Database\Model\TranslatorDataContext.cs" />
+    <Compile Include="Nuance\AppInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Speech\SpeechTTS.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="WatermarkTextBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ConversationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App Hub\Icon\icon.psd" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <None Include="App Hub\Icon\173.png" />
+    <None Include="App Hub\Icon\200.png" />
+    <None Include="App Hub\Icon\62.png" />
+    <None Include="App Hub\Icon\96.png" />
+    <None Include="App Hub\Icon\99.png" />
+    <None Include="App Hub\Icon\National-Flags.jpg" />
+    <None Include="App Hub\Icon\173-World_Flags.png" />
+    <None Include="App Hub\Icon\World_Flags.jpg" />
+    <None Include="App Hub\Icon\World_Flags.png" />
+    <None Include="App Hub\Icon\200-World_Flags.png" />
+    <None Include="App Hub\Icon\62-World_Flags.png" />
+    <None Include="App Hub\Icon\96-World_Flags.png" />
+    <None Include="App Hub\Icon\99-World_Flags.png" />
+    <None Include="App Hub\Screenshots\t1.png" />
+    <None Include="App Hub\Screenshots\t2.png" />
+    <None Include="App Hub\Screenshots\t3.png" />
+    <None Include="App Hub\Screenshots\t4.png" />
+    <None Include="App Hub\Screenshots\t6.png" />
+    <None Include="App Hub\Screenshots\t7.png" />
+    <None Include="App Hub\Screenshots\t8.png" />
+    <Resource Include="ApplicationIcon.png" />
+    <Resource Include="Background.png" />
+    <None Include="App Hub\Artwork\globe_flags-transparent.png" />
+    <None Include="App Hub\Artwork\globe_flags.png" />
+    <None Include="App Hub\Artwork\173px-artwork.png" />
+    <None Include="App Hub\Artwork\200px-artwork.png" />
+    <None Include="App Hub\Artwork\99px-artwork.png" />
+    <None Include="App Hub\Artwork\t01.png" />
+    <None Include="App Hub\Artwork\t02.png" />
+    <None Include="App Hub\Artwork\t03.png" />
+    <None Include="App Hub\Artwork\t04.png" />
+    <None Include="App Hub\Artwork\t05.png" />
+    <None Include="App Hub\Artwork\t06.png" />
+    <None Include="App Hub\Artwork\t07.png" />
+    <Content Include="beep.wav" />
+    <Content Include="Extension\ClientLibraryBase.dll" />
+    <Content Include="Extension\Coding4Fun.Phone.Controls.dll" />
+    <Content Include="Extension\Microsoft.Phone.Controls.Toolkit.dll" />
+    <Content Include="Extension\Newtonsoft.Json.dll" />
+    <Content Include="Extension\Nuance\nmsp_audioplayback.dll" />
+    <Content Include="Extension\Nuance\nmsp_audiorecord.dll" />
+    <Content Include="Extension\Nuance\nmsp_core.dll" />
+    <Content Include="Extension\Nuance\nmsp_dictationresult.dll" />
+    <Content Include="Extension\Nuance\nmsp_oem.dll" />
+    <Content Include="Extension\Nuance\nmsp_resource_common.dll" />
+    <Content Include="Extension\Nuance\nmsp_resource_nmas.dll" />
+    <Content Include="Extension\Nuance\nmsp_vocoder_speex.dll" />
+    <Content Include="Extension\Nuance\SpeechKit.dll" />
+    <Content Include="Extension\SpeechRecognitionClientLibrary.dll" />
+    <Content Include="Extension\WP7Contrib.View.Controls.dll" />
+    <Content Include="Extension\wpSpeech.dll" />
+    <Resource Include="Images\advertisment\Close.png" />
+    <Content Include="Icons\dark\appbar.edit.rest.png" />
+    <Content Include="Icons\dark\appbar.people.status.png" />
+    <Content Include="Icons\dark\arrow_for_black.png" />
+    <Content Include="Icons\extra\dark\appbar.favs.removefrom.rest.png" />
+    <Content Include="Icons\dark\appbar.delete.rest.png" />
+    <Content Include="Icons\dark\appbar.favs.rest.png" />
+    <Content Include="Icons\dark\appbar.mic.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.send.text.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.sendmessage.rest.png" />
+    <Content Include="Icons\dark\appbar.transport.shuffle.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.heart.broken.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.heart.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.heart2.broken.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.heart2.empty.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.heart2.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.people.1.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.people.2.rest.png" />
+    <Content Include="Icons\extra\dark\appbar.smile.3.rest.png" />
+    <DesignDataWithDesignTimeCreatableTypes Include="MessageCollectionDesignTime.xml" />
+    <Content Include="Icons\extra\dark\appbar.sound.2.png" />
+    <Content Include="Icons\dark\appbar.sound.3.png" />
+    <Resource Include="Icons\extra\light\appbar.sound.2.png" />
+    <Resource Include="Icons\extra\light\appbar.star.delete.png" />
+    <Resource Include="Icons\extra\light\appbar.star.invincible.png" />
+    <Resource Include="Icons\extra\light\appbar.star.minus.png" />
+    <Resource Include="Icons\extra\light\delete_black.png" />
+    <Resource Include="Icons\extra\light\like_black.png" />
+    <Content Include="Icons\light\appbar.delete.rest.png" />
+    <Content Include="Icons\light\appbar.edit.rest.png" />
+    <Content Include="Icons\extra\dark\delete_white.png" />
+    <Content Include="Icons\light\appbar.favs.rest.png" />
+    <Content Include="Icons\light\appbar.favs.add.rest.png" />
+    <Content Include="Icons\light\appbar.people.status.png" />
+    <Content Include="Icons\light\appbar.sound.3.png" />
+    <Content Include="Icons\dark\appbar.favs.add.rest.png" />
+    <Content Include="Icons\light\arrow_for_white.png" />
+    <Content Include="Images\Flags\200px-Afrikaans.png" />
+    <Content Include="Images\Flags\200px-Albanian.png" />
+    <Content Include="Images\Flags\200px-Arabic.png" />
+    <Content Include="Images\Flags\200px-Azerbaijani.png" />
+    <Content Include="Images\Flags\200px-Basque.png" />
+    <Content Include="Images\Flags\200px-Belarusian.png" />
+    <Content Include="Images\Flags\200px-Bengali.png" />
+    <Content Include="Images\Flags\200px-Bulgarian.png" />
+    <Content Include="Images\Flags\200px-Catalan.png" />
+    <Content Include="Images\Flags\200px-Chinese.png" />
+    <Content Include="Images\Flags\200px-Chinese_Traditional.png" />
+    <Content Include="Images\Flags\200px-Croatian.png" />
+    <Content Include="Images\Flags\200px-Czech.png" />
+    <Content Include="Images\Flags\200px-Danish.png" />
+    <Content Include="Images\Flags\200px-Dutch.png" />
+    <Content Include="Images\Flags\200px-English.png" />
+    <Content Include="Images\Flags\200px-Esperanto.png" />
+    <Content Include="Images\Flags\200px-Estonian.png" />
+    <Content Include="Images\Flags\200px-Filipino.png" />
+    <Content Include="Images\Flags\200px-Finnish.png" />
+    <Content Include="Images\Flags\200px-French.png" />
+    <Content Include="Images\Flags\200px-Galician.png" />
+    <Content Include="Images\Flags\200px-Georgian.png" />
+    <Content Include="Images\Flags\200px-German.png" />
+    <Content Include="Images\Flags\200px-Greek.png" />
+    <Content Include="Images\Flags\200px-Gujarati.png" />
+    <Content Include="Images\Flags\200px-Haitian_Creole.png" />
+    <Content Include="Images\Flags\200px-Hebrew.png" />
+    <Content Include="Images\Flags\200px-Hindi.png" />
+    <Content Include="Images\Flags\200px-Hungarian.png" />
+    <Content Include="Images\Flags\200px-Icelandic.png" />
+    <Content Include="Images\Flags\200px-Indonesian.png" />
+    <Content Include="Images\Flags\200px-Irish.png" />
+    <Content Include="Images\Flags\200px-Italian.png" />
+    <Content Include="Images\Flags\200px-Japanese.png" />
+    <Content Include="Images\Flags\200px-Kannada.png" />
+    <Content Include="Images\Flags\200px-Korean.png" />
+    <Content Include="Images\Flags\200px-Latin.png" />
+    <Content Include="Images\Flags\200px-Latvian.png" />
+    <Content Include="Images\Flags\200px-Lithuanian.png" />
+    <Content Include="Images\Flags\200px-Macedonian.png" />
+    <Content Include="Images\Flags\200px-Malay.png" />
+    <Content Include="Images\Flags\200px-Maltese.png" />
+    <Content Include="Images\Flags\200px-Norwegian.png" />
+    <Content Include="Images\Flags\200px-Persian.png" />
+    <Content Include="Images\Flags\200px-Polish.png" />
+    <Content Include="Images\Flags\200px-Portuguese.png" />
+    <Content Include="Images\Flags\200px-Romanian.png" />
+    <Content Include="Images\Flags\200px-Russian.png" />
+    <Content Include="Images\Flags\200px-Serbian.png" />
+    <Content Include="Images\Flags\200px-Slovak.png" />
+    <Content Include="Images\Flags\200px-Slovenian.png" />
+    <Content Include="Images\Flags\200px-Spanish.png" />
+    <Content Include="Images\Flags\200px-Swahili.png" />
+    <Content Include="Images\Flags\200px-Swedish.png" />
+    <Content Include="Images\Flags\200px-Tamil.png" />
+    <Content Include="Images\Flags\200px-Telugu.png" />
+    <Content Include="Images\Flags\200px-Thai.png" />
+    <Content Include="Images\Flags\200px-Turkish.png" />
+    <Content Include="Images\Flags\200px-Ukrainian.png" />
+    <Content Include="Images\Flags\200px-Urdu.png" />
+    <Content Include="Images\Flags\200px-Vietnamese.png" />
+    <Content Include="Images\Flags\200px-Welsh.png" />
+    <Content Include="Images\Flags\200px-Yiddish.png" />
+    <Content Include="Images\Nuance\Nuancelogo_dark_144x72.png" />
+    <Content Include="Images\Nuance\Nuancelogo_light_144x72.png" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

@@ -1,0 +1,4 @@
+﻿<MessageCollection xmlns="clr-namespace:translator">
+  <Message Text="Hey Chris, how does this look ?" Side="You"/>
+  <Message Text="????" Side="Me"/>
+</MessageCollection>

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "translator", "translator\translator.csproj", "{55B6190A-9149-4A96-B58E-B7D8EA954936}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D14EA4DB-6D7E-4D0C-9B1C-FA7DFDEC48DB}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2E054BFE-8DA8-434F-855F-CCEB676F49F3}"
+	ProjectSection(SolutionItems) = preProject
+		translator\Extension\ClientLibraryBase.dll = translator\Extension\ClientLibraryBase.dll
+		translator\Extension\Coding4Fun.Phone.Controls.dll = translator\Extension\Coding4Fun.Phone.Controls.dll
+		translator\Extension\Microsoft.Phone.Controls.Toolkit.dll = translator\Extension\Microsoft.Phone.Controls.Toolkit.dll
+		translator\Extension\Newtonsoft.Json.dll = translator\Extension\Newtonsoft.Json.dll
+		translator\Extension\SpeechRecognitionClientLibrary.dll = translator\Extension\SpeechRecognitionClientLibrary.dll
+		translator\Extension\WP7Contrib.View.Controls.dll = translator\Extension\WP7Contrib.View.Controls.dll
+		translator\Extension\wpSpeech.dll = translator\Extension\wpSpeech.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://5555.dyndns.tv:8080/tfs/windows%20phone%207
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = translator\\translator.csproj
+		SccProjectName1 = translator
+		SccLocalPath1 = translator
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55B6190A-9149-4A96-B58E-B7D8EA954936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B6190A-9149-4A96-B58E-B7D8EA954936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B6190A-9149-4A96-B58E-B7D8EA954936}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{55B6190A-9149-4A96-B58E-B7D8EA954936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B6190A-9149-4A96-B58E-B7D8EA954936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B6190A-9149-4A96-B58E-B7D8EA954936}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

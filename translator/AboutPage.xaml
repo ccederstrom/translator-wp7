@@ -1,0 +1,138 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="translator.InfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    toolkit:TiltEffect.IsTiltEnabled="True" xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <controls:Pivot Title="TRANSLATOR">
+   
+            <!--Pivot item HELP-->
+            <controls:PivotItem Header="help">
+                <Grid>
+                    <ScrollViewer>
+                        <StackPanel Width="428">
+                            <TextBlock Height="Auto" Name="txtHelp" Text="We enjoy your suggestion, so please give us feedback to help improve your experiance." FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Speech Synthesis"  FontSize="26" TextWrapping="Wrap" Margin="0,10,0,0" />
+                            <TextBlock Height="Auto" Text="Languages marked (*) do not have speech synthesis." FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+
+                            <TextBlock Height="Auto" Text="Tips"  FontSize="26" TextWrapping="Wrap" Margin="0,10,0,0" />
+                            <TextBlock Height="Auto" Margin="0,0,0,7" Text="Tilt phone sideways for landscape view." FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Margin="0,0,0,7" Text="Press Enter on keyboard to translate text." FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Margin="0,0,0,7"  Name="txtDirections" Text="Select a language to translate from and to and click translate or speak. Mark history you like as a favorite to save it in the starred pivot." FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Margin="0,0,0,7" Text="Starring history will mark it as favorite and will be saved." FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Margin="0,0,0,7" Text="Translated text will be saved in the history." FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Margin="0,0,0,7" Text="Internet connectivity is necessary for Speech Synthesis." FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PivotItem>
+            <!--Pivot item one-->
+            <controls:PivotItem Header="about">
+                <Grid>
+                    <Grid.RowDefinitions>
+
+
+                    </Grid.RowDefinitions>
+                    <ScrollViewer HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="Auto" Margin="0">
+                        <StackPanel Width="428">
+                            <TextBlock Height="Auto" Width="Auto" Text="Application Title" VerticalAlignment="Top"  HorizontalAlignment="Stretch" FontSize="26" Name="txtAppName" />
+                            <TextBlock Height="Auto" HorizontalAlignment="Stretch" Name="txtVersion" Text="Version" Foreground="{StaticResource PhoneAccentBrush}" VerticalAlignment="Top" FontSize="22.667" />
+                            <TextBlock Height="Auto" Width="Auto" Text="Description" VerticalAlignment="Top"  HorizontalAlignment="Stretch"  Name="txtDescription"  Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" FontSize="22.667" Margin="0,10,0,0" />
+                            <TextBlock Height="Auto" FontSize="26" HorizontalAlignment="Stretch" Name="txtSupport" Text="For feedback and support contact" VerticalAlignment="Top" Margin="0,10,0,0" />
+                            <HyperlinkButton Content="pngc.wp7@hotmail.com" Height="Auto" HorizontalAlignment="Stretch" Margin="0" Name="btnContact" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Left" Foreground="{StaticResource PhoneAccentBrush}" Click="btnContact_Click" />
+                            <TextBlock  Height="Auto"  FontSize="26" HorizontalAlignment="Stretch" Margin="0,10,0,0" Name="textBlock1" Text="Rate and review app" VerticalAlignment="Top" />
+                            <HyperlinkButton Content="Rate and review" Height="Auto" HorizontalAlignment="Stretch" Margin="0" Name="btnReview" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Left" Foreground="{StaticResource PhoneAccentBrush}" Click="btnReview_Click" />
+                            <TextBlock Height="Auto" FontSize="26" HorizontalAlignment="Stretch" Margin="0,10,0,0" Name="textBlock2" Text="More apps" VerticalAlignment="Top" />
+                            <HyperlinkButton Content="Marketplace" Height="Auto" HorizontalAlignment="Stretch" Margin="0" Name="btnMarketplace" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Left" Foreground="{StaticResource PhoneAccentBrush}" Click="btnMarketplace_Click" />
+                       <Image Name="NuanceLogo" Source="/translator;component/Images/Nuance/Nuancelogo_dark_144x72.png" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="72" Width="144" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item HISTORY-->
+            <controls:PivotItem Header="history">
+                <Grid>
+                    <ScrollViewer>
+                        <StackPanel Width="428">
+                            <TextBlock Height="Auto" Text="Version 1.7" FontSize="26" />
+                            <TextBlock Height="Auto" Text="Added voice dictation feature"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Added 27 new languages"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Version 1.6" FontSize="26" />
+                            <TextBlock Height="Auto" Text="UX improvements"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Version 1.5" FontSize="26" />
+                            <TextBlock Height="Auto" Text="Minor UI changes"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Enabled trial for paid version"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Trial and free versions can now close ads"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Version 1.4" FontSize="26" />
+                            <TextBlock Height="Auto" Text="Fixed minor UI and usability issues"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Version 1.3" FontSize="26" />
+                            <TextBlock Height="Auto" Text="Added translated history feature"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Version 1.2" FontSize="26" />
+                            <TextBlock Height="Auto" Text="Updated icon and disabled locked screen"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Version 1.1" FontSize="26" />
+                            <TextBlock Height="Auto" Text="Speech synthesis list updated"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" />
+                            <TextBlock Height="Auto" Text="Version 1.0" FontSize="26" />
+                            <TextBlock Height="Auto" Text="Inital release"  FontSize="22.667" Foreground="{StaticResource PhoneAccentBrush}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                    
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+        <StackPanel Name="AdControlPanel" VerticalAlignment="Bottom">
+            <my:AdControl AdUnitId="10025396" ApplicationId="9a657926-7a25-40f0-82ef-eab697b53a99" Height="80" Name="adControl" Width="480" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Center" />
+            <Image  HorizontalAlignment="Left" Margin="421,-97,0,0" Name="image1" VerticalAlignment="Top" Source="/translator;component/Images/advertisment/Close.png" Height="44" Width="43" Tap="AdControl_Tap" />
+        </StackPanel>
+        </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItem2" Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    
+</phone:PhoneApplicationPage>
